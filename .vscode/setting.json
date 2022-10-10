@@ -1,0 +1,6 @@
+{
+  "git.autofetch": true,
+  "git.showUnpublishedCommitsButton": "always",
+  "git.supportCancellation": true,
+  "C_Cpp.errorSquiggles": "Disabled"
+}
