@@ -34,5 +34,5 @@ enum ColorType {
 final customColor = {
   ColorType.deepPurple: const Color(0xFF572E66),
   ColorType.grey: const Color(0xFFAAAAAA),
-  ColorType.red: const Color(0xFFFFFFFF),
+  ColorType.white: const Color(0xFFFFFFFF),
 };
