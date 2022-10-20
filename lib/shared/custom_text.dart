@@ -59,7 +59,7 @@ class CustomText extends SizedBox {
   final bool inherit;
 
   CustomText({
-    Key? key,
+    super.key,
     required this.text,
     this.typoType = TypoType.body,
     this.isFullWidth = false,
@@ -67,7 +67,6 @@ class CustomText extends SizedBox {
     this.textAlign = TextAlign.center,
     this.colorType = ColorType.black,
   }) : super(
-          key: key,
           child: Text(
             text,
             textAlign: textAlign,

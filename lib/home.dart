@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:today_protest2/shared/custom_text.dart';
+
 import 'package:today_protest2/shared/theme.dart';
+
+import 'shared/custom_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
