@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:today_protest2/provider/bottom_navigation_provider.dart';
 import 'package:today_protest2/provider/counter_provider.dart';
 
 import 'Home.dart';
@@ -22,8 +23,15 @@ class MyApp extends StatelessWidget {
         primaryColor: customColor[ColorType.deepPurple],
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ChangeNotifierProvider(
-        create: (BuildContext context) => CounterProvider(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (BuildContext context) => CounterProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (BuildContext context) => BottomNavigationProvider(),
+          )
+        ],
         child: Home(),
       ),
     );
