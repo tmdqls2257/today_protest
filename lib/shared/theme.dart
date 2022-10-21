@@ -35,4 +35,5 @@ final customColor = {
   ColorType.deepPurple: const Color(0xFF572E66),
   ColorType.grey: const Color(0xFFAAAAAA),
   ColorType.white: const Color(0xFFFFFFFF),
+  ColorType.red: const Color(0xFFff0000)
 };
