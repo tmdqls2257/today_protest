@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:today_protest2/provider/bottom_navigation_provider.dart';
-import 'package:today_protest2/provider/counter_provider.dart';
-import 'package:today_protest2/shared/custom_text.dart';
+
 import 'package:today_protest2/shared/theme.dart';
 
 import 'ui/count_home_widget.dart';
 import 'ui/movie_list_widget.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   Widget _navigationBody(BottomNavigationProvider bottomNavigationProvider) {
     switch (bottomNavigationProvider.currentPage) {
       case 0:
@@ -23,10 +27,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CounterProvider counterProvider =
-        Provider.of<CounterProvider>(context, listen: false);
     BottomNavigationProvider bottomNavigationProvider =
-        Provider.of<BottomNavigationProvider>(context, listen: false);
+        Provider.of<BottomNavigationProvider>(context);
 
     return Scaffold(
       // body: const CountHomeWidget(),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:today_protest2/provider/bottom_navigation_provider.dart';
 import 'package:today_protest2/provider/counter_provider.dart';
+import 'package:today_protest2/provider/movie_provider.dart';
 
 import 'Home.dart';
 import 'shared/theme.dart';
@@ -27,6 +27,9 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(
             create: (BuildContext context) => CounterProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (BuildContext context) => MovieProvider(),
           ),
           ChangeNotifierProvider(
             create: (BuildContext context) => BottomNavigationProvider(),
